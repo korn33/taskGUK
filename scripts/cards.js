@@ -70,9 +70,9 @@ export const cards = {
                         <div class="price">
                             <div class="card-club-block">
                                 <div class="card-club-block-p"><span>По карте <br> клуба</span></div>
-                                <div class="price-value"  id="${i.productId}PG"><span>${i.priceGold} ₽</span></div>
+                                <div class="price-value"  id="${i.productId}PG"><span>${i.priceGold} </span><div class="rouble"></div></div>
                             </div>
-                            <div class="not-club-block" id="${i.productId}PR"><span>${i.priceRetail} ₽</span></div>
+                            <div class="not-club-block" id="${i.productId}PR"><span>${i.priceRetail} </span><div class="rouble rouble-gray"></div></div>
                             <div class="bonus-price"><span>Получить ${i.bonusAmount} бонусов при покупке</span></div>
                         </div>
                         <div class="sales-mode">
@@ -113,15 +113,15 @@ export const cards = {
                     if (targetClick.id === idThisCard + 'Or') {
                         idSecondMode = idThisCard + 'Al';
                         let cardPrice = document.getElementById(idThisCard + 'PG');
-                        cardPrice.innerHTML = `${i.priceGold} ₽`;
+                        cardPrice.innerHTML = `${i.priceGold} <div class="rouble">`;
                         let notCardPrice = document.getElementById(idThisCard + 'PR');
-                        notCardPrice.innerHTML = `${i.priceRetail} ₽`;
+                        notCardPrice.innerHTML = `${i.priceRetail} <div class="rouble rouble-gray">`;
                     } else if (targetClick.id === idThisCard + 'Al')  {
                         idSecondMode = idThisCard + 'Or';
                         let cardPrice = document.getElementById(idThisCard + 'PG');
-                        cardPrice.innerHTML = `${i.priceGoldAlt} ₽`;
+                        cardPrice.innerHTML = `${i.priceGoldAlt} <div class="rouble">`;
                         let notCardPrice = document.getElementById(idThisCard + 'PR');
-                        notCardPrice.innerHTML = `${i.priceRetailAlt} ₽`;
+                        notCardPrice.innerHTML = `${i.priceRetailAlt} <div class="rouble rouble-gray">`;
                     }
                     let secondMode = document.getElementById(idSecondMode);
                     secondMode.classList.toggle('mode-alt');

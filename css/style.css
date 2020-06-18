@@ -339,3 +339,13 @@ button {
     margin-top: 1rem !important;
     margin-bottom: 1rem !important;
 }
+.rouble {
+    background-image: url("../images/rouble.png");
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background-size: contain;
+}
+.rouble-gray {
+    opacity: 0.5;
+}
